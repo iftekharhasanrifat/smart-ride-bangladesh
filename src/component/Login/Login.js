@@ -177,7 +177,7 @@ const Login = () => {
                             </>
                         }
                          {user.passwordError &&<p className="text-danger">{user.passwordError}</p>}
-                        <input className="form-control mb-2 bg-warning" type="submit" value={newUser ? 'Sign Up' : 'Sign In'} />
+                        <input className="form-control mb-2 btn btn-primary" type="submit" value={newUser ? 'Sign Up' : 'Sign In'} />
 
                         <Link className="d-flex justify-content-center" onClick={() => setNewUser(!newUser)} to='/login'>{newUser ? 'I have an account' : 'Create New User'}</Link>
                     </form>
@@ -186,7 +186,7 @@ const Login = () => {
             </div>
             <div className="mt-3 button-container mb-5">
                 {
-                    user.isLogin ? <button onClick={handleLogOut}>LogOut</button> : <button className="signIn-btn btn btn-secondary" onClick={googleLogin}><img src={googleicon} alt="" /> googleLogin</button>
+                    !user.isLogin && <button className="signIn-btn btn btn-secondary" onClick={googleLogin}><img src={googleicon} alt="" /> continue with google</button>
                 }
             </div>
         </div>

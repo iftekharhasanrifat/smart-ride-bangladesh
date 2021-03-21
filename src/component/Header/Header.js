@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBus } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     let history = useHistory();
     const handleClick=()=>{
@@ -9,11 +10,12 @@ const Header = () => {
     }
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const {isLogin,name} = loggedInUser;
+    
     return (
         <nav className="container navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
           <h1 className="navbar-brand" href="#">
-            Fancy Rider Bangladesh
+          <FontAwesomeIcon icon={faBus} /><span> Smart Ride</span>
           </h1>
           <button
             className="navbar-toggler"

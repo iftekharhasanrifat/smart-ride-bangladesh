@@ -14,6 +14,7 @@ import Destination from './component/Destination/Destination';
 import Blog from './component/Blog/Blog';
 import Contact from './component/Contact/Contact';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import NotFound from './component/NotFound/NotFound';
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -39,6 +40,9 @@ function App() {
           </PrivateRoute>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NotFound/>
           </Route>
         </Switch>
       </Router>
