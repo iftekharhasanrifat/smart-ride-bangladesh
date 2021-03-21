@@ -1,0 +1,16 @@
+.search-btn{
+    width: 100%;
+}
+.rows{
+    display:flex;
+    flex-wrap: wrap;
+}
+.destination-form{
+    border-radius:10px;
+}
+.ride-info{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
