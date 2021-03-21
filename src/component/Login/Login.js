@@ -54,21 +54,6 @@ const Login = () => {
             });
     }
 
-    const handleLogOut = () => {
-        firebase.auth().signOut()
-            .then(() => {
-                const userInfo = {
-                    isLogin: false,
-                    name: '',
-                    email: ''
-                }
-                handleResponse(userInfo, false)
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }
-
     const handleBlur = (event) => {
         let isFormValid = true;
         let password;
