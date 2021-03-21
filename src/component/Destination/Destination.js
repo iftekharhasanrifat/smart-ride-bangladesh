@@ -72,7 +72,7 @@ const Destination = () => {
                             <label htmlFor="pickTo"><strong>Pick To</strong></label>
                             <input onBlur={handleBlur} name="pickTo" className="form-control mb-2" type="text" required placeholder="pick to" />
                             <label htmlFor="party"><strong>Choose Your Time</strong> </label>
-                            <input type="dateTime-local"  className="form-control mb-2" name="party" id="" />
+                            <input type="dateTime-local"  className="form-control mb-2" name="party" id=""/>
                             <input className="search-btn btn btn-danger mb-2 p-2" type="submit" value="search" />
                         </form>}
                 </div>
