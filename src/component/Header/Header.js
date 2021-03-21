@@ -9,7 +9,7 @@ const Header = () => {
     history.push('/login')
   }
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const { isLogin, name } = loggedInUser;
+  const { name } = loggedInUser;
 
   return (
     <nav className="container navbar navbar-expand-lg navbar-light">

@@ -67,12 +67,12 @@ const Destination = () => {
                             </div>
                         </div>
                         : <form onSubmit={handleSubmit} className="destination-form ml-1 mb-2 bg-light p-3" action="">
+                            <label htmlFor="party"><strong>Choose Your Time</strong> </label>
+                            <input type="dateTime-local"  className="form-control mb-2" name="party" id=""/>
                             <label htmlFor="pickFrom"><strong>Pick From</strong></label>
                             <input onBlur={handleBlur} name="pickFrom" className="form-control mb-2" type="text" required placeholder="pick from" />
                             <label htmlFor="pickTo"><strong>Pick To</strong></label>
                             <input onBlur={handleBlur} name="pickTo" className="form-control mb-2" type="text" required placeholder="pick to" />
-                            <label htmlFor="party"><strong>Choose Your Time</strong> </label>
-                            <input type="dateTime-local"  className="form-control mb-2" name="party" id=""/>
                             <input className="search-btn btn btn-danger mb-2 p-2" type="submit" value="search" />
                         </form>}
                 </div>
