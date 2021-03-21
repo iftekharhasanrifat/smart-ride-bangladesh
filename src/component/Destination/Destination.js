@@ -8,7 +8,8 @@ const Destination = () => {
     const { rideId } = useParams();
     const [destination, setDestination] = useState({
         pickFrom: '',
-        pickTo: ''
+        pickTo: '',
+        isReady: false
     })
     const rideInfo = RiderData.find(rider => rider.id === rideId);
     const { image, name, passenger, price } = rideInfo;
@@ -18,15 +19,16 @@ const Destination = () => {
         setDestination(newDestination);
     }
     const handleSubmit = (e) => {
-        setDestination(destination);
-        console.log(destination);
+        const newDestination = {...destination};
+        newDestination.isReady = true;
+        setDestination(newDestination);
         e.preventDefault();
     }
     return (
         <div>
             <div className="rows">
                 <div className="col-md-4 mt-5">
-                    {destination.pickTo && destination.pickFrom ?
+                    {destination.pickTo && destination.pickFrom && destination.isReady?
                         <div>
                             <div className="destination-form ml-1 mb-2 bg-danger text-white p-3">
                                 <ul>
@@ -67,12 +69,12 @@ const Destination = () => {
                             </div>
                         </div>
                         : <form onSubmit={handleSubmit} className="destination-form ml-1 mb-2 bg-light p-3" action="">
-                            <label htmlFor="party"><strong>Choose Your Time</strong> </label>
-                            <input type="dateTime-local"  className="form-control mb-2" name="party" id=""/>
                             <label htmlFor="pickFrom"><strong>Pick From</strong></label>
                             <input onBlur={handleBlur} name="pickFrom" className="form-control mb-2" type="text" required placeholder="pick from" />
                             <label htmlFor="pickTo"><strong>Pick To</strong></label>
                             <input onBlur={handleBlur} name="pickTo" className="form-control mb-2" type="text" required placeholder="pick to" />
+                            <label htmlFor="party"><strong>Choose Your Time</strong> </label>
+                            <input type="date"  className="form-control mb-2" name="party" id=""/>
                             <input className="search-btn btn btn-danger mb-2 p-2" type="submit" value="search" />
                         </form>}
                 </div>
