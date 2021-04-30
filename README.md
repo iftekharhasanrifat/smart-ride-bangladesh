@@ -1,9 +1,10 @@
-# Project Name
+# Smart Ride Bangladesh
 
-Smart Ride Bangladesh
+# Live Site
+[smart-ride-bangladesh](https://urban-rider-authentication.web.app/)
 
 # Description
-It will let you order for a ride to visit through the city. You can check for the prices and number of sit available for the person.
+It will let you order for a ride to visit through the city. You can check for the prices and number of sit available for the person. If you click on the vehicles, you will be redirected to login page if you are not logged in. After logging in you can order for a ride. You can see the google map in this for navigation.
 
 # features
 This project has some features :
@@ -16,6 +17,5 @@ This project has some features :
 4)If you click on the vehicles you will be redirected to login page if you are not logged in. After logging in you can order for a ride. 
 5)You can see the google map in this for navigation.
 
-# Live Site
-[smart-ride-bangladesh](https://urban-rider-authentication.web.app/)
-
+# Framework/library
+React JS, React Router, React Bootstrap, Material UI, Bootstrap.
