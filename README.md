@@ -22,3 +22,8 @@ It will let you order for a ride to visit through the city. You can check for th
 - React Bootstrap 
 - Material UI 
 - Bootstrap
+
+# UI Screenshot
+
+<img src="https://i.ibb.co/R69b3vs/Screenshot-86.png" alt="Screenshot-86" border="0" alt="ui screenshots" />
+<img src="https://i.ibb.co/gjPF4DP/Screenshot-88.png" alt="Screenshot-88" border="0" alt="ui screenshots" />
